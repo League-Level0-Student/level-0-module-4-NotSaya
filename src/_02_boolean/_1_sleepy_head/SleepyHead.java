@@ -107,6 +107,12 @@ String percentage = JOptionPane.showInputDialog("What percentage did you score o
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
-		
+		rob.setSpeed(100);
+		rob.penDown();
+		rob.setPenColor(100, 0, 0);
+		for (int i = 4; i > 0; i--) {
+		rob.move(30);
+		rob.turn(90);
+		}
 	}	
 }
