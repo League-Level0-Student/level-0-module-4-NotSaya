@@ -4,7 +4,7 @@
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-boolean canPlaySounds = true;
+boolean canPlaySounds = false;
 
 void setup() {
   
@@ -24,12 +24,17 @@ void draw() {
           // Use this print statement to help you find the location of Waldo to use in the code below
           // println("X: " + mouseX + " Y: " + mouseY); 
    println("X: " + mouseX + " Y: " + mouseY); 
+   int X = mouseX;
+   int Y = mouseY;
+ if (X >= 480 && X <= 505 && Y >= 245 && Y <= 285){
+   text ("Waldo found!", 490, 240);
+ }
           // Check if the location of the mouse is anywhere on the image of Waldo.
           // If it is, print “Waldo found!”  Use the text() command to write it on the sketch.
           
                 if (canPlaySounds) {
                     // Use the playWhoohoo() method below. You can change the sound if you want 
-                } 
+              } 
     
           // However, if the mouse is not on Waldo, print "Not here!" 
           // Use the text() command to write it on the sketch. 
@@ -40,12 +45,13 @@ void draw() {
                 
 }
 
+
 /*********************  This code is needed to play sounds. ********************
               Remove the comment markers below, but DON'T CHANGE THE CODE */
               
 
-/*
-import ddf.minim.*;
+
+/*import ddf.minim.*;
 Minim minim = new Minim(this); 
 
 AudioSample woohoo;
@@ -62,5 +68,5 @@ void playDoh() {
          doh = minim.loadSample("homer-doh.wav"); 
      doh.stop();
      doh.trigger();
-}
-*/
+
+*/}
